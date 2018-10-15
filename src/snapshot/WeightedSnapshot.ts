@@ -1,6 +1,6 @@
 import {AbstractSnapshot} from './AbstractSnapshot';
 import {WeightSample} from '../domain';
-import {binarySearch} from '../../util/binarySearch';
+import {binarySearch} from '../util/binarySearch';
 
 /**
  * A statistical snapshot of a {@link WeightedSnapshot}.

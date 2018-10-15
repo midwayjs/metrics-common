@@ -4,11 +4,10 @@
   "main": "dist/index",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run lint && rm -rf ./dist && ../../node_modules/.bin/tsc",
-    "start": "npm run build && node dist/index",
-    "lint": "../../node_modules/.bin/tslint --format prose -c ../../tslint.json src/**/*.ts test/**/*.ts",
-    "test": "npm run lint && TS_NODE_CACHE=true mocha -t 100000",
-    "cov": "TS_NODE_CACHE=true nyc mocha -t 100000",
+    "build": "npm run lint && rm -rf ./dist && midway-bin build",
+    "lint": "tslint --format prose -c ./tslint.json src/**/*.ts test/**/*.ts",
+    "test": "npm run lint && midway-bin clean && midway-bin test --ts",
+    "cov": "midway-bin cov --tes",
     "ci": "npm run test"
   },
   "keywords": [
@@ -25,6 +24,7 @@
     "@types/lodash": "^4.14.109",
     "@types/mocha": "^2.2.41",
     "@types/node": "^10.5.5",
+    "chai": "^4.2.0",
     "git-hooks": "^1.1.10",
     "midway-bin": "^0.3.8",
     "ts-node": "^7.0.1",
@@ -39,11 +39,7 @@
     ],
     "exclude": [
       "typings",
-      "**/*.d.ts",
-      "src/client/domain.ts",
-      "src/common/domain.ts",
-      "src/common/MetricsManager.ts",
-      "src/trace/Constants.ts"
+      "**/*.d.ts"
     ],
     "extension": [
       ".ts"
