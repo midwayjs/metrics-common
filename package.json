@@ -1,0 +1,66 @@
+{
+  "name": "metrics-common",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run lint && rm -rf ./dist && ../../node_modules/.bin/tsc",
+    "start": "npm run build && node dist/index",
+    "lint": "../../node_modules/.bin/tslint --format prose -c ../../tslint.json src/**/*.ts test/**/*.ts",
+    "test": "npm run lint && TS_NODE_CACHE=true mocha -t 100000",
+    "cov": "TS_NODE_CACHE=true nyc mocha -t 100000",
+    "ci": "npm run test"
+  },
+  "keywords": [
+    "metrics",
+    "alimetrics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/midwayjs/metrics-common.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^3.5.2",
+    "@types/lodash": "^4.14.109",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^10.5.5",
+    "git-hooks": "^1.1.10",
+    "midway-bin": "^0.3.8",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.0"
+  },
+  "dependencies": {},
+  "nyc": {
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "typings",
+      "**/*.d.ts",
+      "src/client/domain.ts",
+      "src/common/domain.ts",
+      "src/common/MetricsManager.ts",
+      "src/trace/Constants.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text",
+      "json",
+      "html",
+      "lcovonly"
+    ],
+    "all": true
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}
