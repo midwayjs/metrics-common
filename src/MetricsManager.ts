@@ -1,12 +1,12 @@
-import {MetricName} from './MetricName';
-import {IMeter} from './metrics/Meter';
-import {ICounter} from './metrics/Counter';
-import {IHistogram} from './metrics/Histogram';
-import {ITimer} from './metrics/Timer';
-import {IMetricsRegistry} from './MetricsRegistry';
-import {MetricFilter} from './MetricFilter';
-import {BaseGauge} from './metrics/Gauge';
-import {Metric} from './domain';
+import { MetricName } from './MetricName';
+import { IMeter } from './metrics/Meter';
+import { ICounter } from './metrics/Counter';
+import { IHistogram } from './metrics/Histogram';
+import { ITimer } from './metrics/Timer';
+import { IMetricsRegistry } from './MetricsRegistry';
+import { MetricFilter } from './MetricFilter';
+import { BaseGauge } from './metrics/Gauge';
+import { Metric } from './domain';
 import { IFastCompass } from './metrics/FastCompass';
 
 export interface MetricsManager {
@@ -63,7 +63,7 @@ export interface MetricsManager {
    * Get a list of group in current MetricManager
    * @return a list of group name
    */
-  listMetricGroups(): Array<string> ;
+  listMetricGroups(): Array<string>;
 
   /**
    * A global flag to complete disable the metrics feature
@@ -135,3 +135,4 @@ export interface MetricsManager {
 
   getNewMetricRegistry(): IMetricsRegistry;
 }
+                                               
