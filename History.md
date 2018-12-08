@@ -1,4 +1,11 @@
 
+1.1.0 / 2018-12-08
+==================
+
+  * Merge pull request #2 from midwayjs/fix_fastcompass
+  * chore: remove node 9
+  * fix: fix fastCompass long number bug
+
 1.0.0 / 2018-10-17
 ==================
 
