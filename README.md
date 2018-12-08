@@ -2,13 +2,11 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/midwayjs/metrics-common/blob/master/LICENSE)
 [![GitHub tag](https://img.shields.io/github/tag/midwayjs/metrics-common.svg)]()
-[![Build Status](https://travis-ci.org/midwayjs/metrics-common.svg?branch=develop)](https://travis-ci.org/midwayjs/metrics-common)
+[![Build Status](https://travis-ci.org/midwayjs/metrics-common.svg?branch=master)](https://travis-ci.org/midwayjs/metrics-common)
 [![Test Coverage](https://img.shields.io/codecov/c/github/midwayjs/metrics-common/master.svg)](https://codecov.io/gh/midwayjs/metrics-common/branch/master)
-[![Package Quality](http://npm.packagequality.com/shield/midway.svg)](http://packagequality.com/#?package=midway)
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
-[![Known Vulnerabilities](https://snyk.io/test/npm/midway/badge.svg)](https://snyk.io/test/npm/midway)
+[![Package Quality](http://npm.packagequality.com/shield/metrics-common.svg)](http://packagequality.com/#?package=metrics-common)
+[![Known Vulnerabilities](https://snyk.io/test/npm/metrics-common/badge.svg)](https://snyk.io/test/npm/metrics-common)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/midwayjs/metrics-common/pulls)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/856737478fa94e78bce39d5fc2315cec)](https://www.codacy.com/app/czy88840616/midway?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=midwayjs/metrics-common&amp;utm_campaign=Badge_Grade)
 
 ## Overview
 
