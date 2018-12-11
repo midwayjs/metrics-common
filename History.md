@@ -1,4 +1,11 @@
 
+1.1.1 / 2018-12-11
+===================
+
+  * Merge pull request #3 from midwayjs/fix_name
+  * fix: fix name in prototype
+  * chore: upgrade readme
+
 1.1.0 / 2018-12-08
 ==================
 
