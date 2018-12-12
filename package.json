@@ -33,6 +33,7 @@
     "typescript": "^2.8.0"
   },
   "dependencies": {
+    "debug": "^4.1.0",
     "long": "^4.0.0",
     "xorshift": "^1.1.1"
   },
