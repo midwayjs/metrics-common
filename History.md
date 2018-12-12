@@ -1,4 +1,10 @@
 
+1.1.3 / 2018-12-12
+==================
+
+  * Merge pull request #6 from midwayjs/added/debug_package
+  * added: debug package
+
 1.1.2 / 2018-12-12
 ==================
 
