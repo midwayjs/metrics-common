@@ -23,6 +23,14 @@ Metrics 的原意是 **指标**，用于反馈应用的当前状况的数据值�
 
 包括常见的 Gauge, Counter, Timer, Histogram, Meter，以及扩展出来的 BucketCounter, FastCompass 等。
 
+## Install
+
+```shell
+npm i metrics-common --save
+```
+
+## Usage
+
 ```js
 import { MetricsServerManager } from 'metrics-common';
 
