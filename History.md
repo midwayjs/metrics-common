@@ -1,4 +1,12 @@
 
+1.1.2 / 2018-12-12
+==================
+
+  * Merge pull request #5 from midwayjs/fixed/missing_metrics_server_manager
+  * fixed: missing MetricsServerManager
+  * Merge pull request #4 from midwayjs/add/install_usage
+  * added: install step into readme
+
 1.1.1 / 2018-12-11
 ===================
 
