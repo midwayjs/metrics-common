@@ -1,4 +1,10 @@
 
+1.1.4 / 2018-12-13
+==================
+
+  * Merge pull request #7 from midwayjs/fix_build
+  * fix: fix build bug
+
 1.1.3 / 2018-12-12
 ==================
 
