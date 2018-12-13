@@ -1,5 +1,7 @@
 import {
-  ICounter, IFastCompass,
+  BaseGauge,
+  ICounter,
+  IFastCompass,
   IHistogram,
   IMeter,
   IMetricsRegistry,
@@ -63,7 +65,7 @@ export class MetricsServerManager implements MetricsManager {
     return this.metricRegistryMap.has(group);
   }
 
-  getGauges(group: string, filter: MetricFilter = MetricFilter.ALL) {
+  getGauges(group: string, filter: MetricFilter = MetricFilter.ALL): Map<string, BaseGauge<any>> {
     let metricRegistry: IMetricsRegistry = this.getMetricRegistryByGroup(group);
     return metricRegistry.getGauges(filter);
   }
