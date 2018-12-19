@@ -62,7 +62,7 @@ export class MetricsRegistry implements IMetricsRegistry {
   }>();
 
   register(name: MetricName, metric: Metric): Metric {
-    if (metric instanceof MetricSet) {
+    if (metric.type === MetricType.METRICSET) {
       debug('------------> metrics is set:', name, metric);
       this.registerAll(name, <MetricSet> metric);
     } else {
@@ -89,7 +89,7 @@ export class MetricsRegistry implements IMetricsRegistry {
         name = MetricName.parseKey(name);
       }
 
-      if (metric instanceof MetricSet) {
+      if (metric.type === MetricType.METRICSET) {
         this.registerAll(MetricName.join(prefix, name), metric);
       } else {
         this.register(MetricName.join(prefix, name), metric);
