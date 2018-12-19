@@ -1,4 +1,10 @@
 
+1.1.5 / 2018-12-19
+==================
+
+  * Merge pull request #8 from midwayjs/fix/getAllCategoryMetrics_no_fastcompass
+  * feat: support fastcompass at getAllCategoryMetrics and support string as metrics name
+
 1.1.4 / 2018-12-13
 ==================
 
