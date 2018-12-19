@@ -125,6 +125,7 @@ export class MetricsServerManager implements MetricsManager {
     result.set(MetricType.HISTOGRAM, allMetricsRegistry.getHistograms(filter));
     result.set(MetricType.METER, allMetricsRegistry.getMeters(filter));
     result.set(MetricType.TIMER, allMetricsRegistry.getTimers(filter));
+    result.set(MetricType.FASTCOMPASS, allMetricsRegistry.getFastCompasses(filter));
 
     return result;
   }
@@ -158,33 +159,38 @@ export class MetricsServerManager implements MetricsManager {
     return result;
   }
 
-  getMeter(group: string, name: MetricName): IMeter {
-    const meter = this.getMetricRegistryByGroup(group).meter(name);
-    this.allMetricsRegistry.register(name, meter);
+  getMeter(group: string, name: MetricName | string): IMeter {
+    const name2nd: MetricName = typeof name === 'string' ? MetricName.build(name) : name;
+    const meter = this.getMetricRegistryByGroup(group).meter(name2nd);
+    this.allMetricsRegistry.register(name2nd, meter);
     return meter;
   }
 
-  getCounter(group: string, name: MetricName): ICounter {
-    const counter = this.getMetricRegistryByGroup(group).counter(name);
-    this.allMetricsRegistry.register(name, counter);
+  getCounter(group: string, name: MetricName | string): ICounter {
+    const name2nd: MetricName = typeof name === 'string' ? MetricName.build(name) : name;
+    const counter = this.getMetricRegistryByGroup(group).counter(name2nd);
+    this.allMetricsRegistry.register(name2nd, counter);
     return counter;
   }
 
-  getHistogram(group: string, name: MetricName): IHistogram {
-    const histogram = this.getMetricRegistryByGroup(group).histogram(name);
-    this.allMetricsRegistry.register(name, histogram);
+  getHistogram(group: string, name: MetricName | string): IHistogram {
+    const name2nd: MetricName = typeof name === 'string' ? MetricName.build(name) : name;
+    const histogram = this.getMetricRegistryByGroup(group).histogram(name2nd);
+    this.allMetricsRegistry.register(name2nd, histogram);
     return histogram;
   }
 
-  getTimer(group: string, name: MetricName): ITimer {
-    const timer = this.getMetricRegistryByGroup(group).timer(name);
-    this.allMetricsRegistry.register(name, timer);
+  getTimer(group: string, name: MetricName | string): ITimer {
+    const name2nd: MetricName = typeof name === 'string' ? MetricName.build(name) : name;
+    const timer = this.getMetricRegistryByGroup(group).timer(name2nd);
+    this.allMetricsRegistry.register(name2nd, timer);
     return timer;
   }
 
-  getFastCompass(group: string, name: MetricName): IFastCompass {
-    const compass = this.getMetricRegistryByGroup(group).fastCompass(name);
-    this.allMetricsRegistry.register(name, compass);
+  getFastCompass(group: string, name: MetricName | string): IFastCompass {
+    const name2nd: MetricName = typeof name === 'string' ? MetricName.build(name) : name;
+    const compass = this.getMetricRegistryByGroup(group).fastCompass(name2nd);
+    this.allMetricsRegistry.register(name2nd, compass);
     return compass;
   }
 
