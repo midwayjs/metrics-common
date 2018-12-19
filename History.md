@@ -1,4 +1,10 @@
 
+1.1.6 / 2018-12-19
+==================
+
+  * Merge pull request #9 from midwayjs/fix/use_ducktype_replace_with_instanceof_when_check_a_metrics_set
+  * fix: use ducktype check replace with instanceof when check a metricset
+
 1.1.5 / 2018-12-19
 ==================
 
